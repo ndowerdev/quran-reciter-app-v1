@@ -1,0 +1,16 @@
+IndBaTxt[6044]="Demi matahari dan cahayanya di pagi hari,";
+IndBaTxt[6045]="dan bulan apabila mengiringinya,";
+IndBaTxt[6046]="dan siang apabila menampakkannya,";
+IndBaTxt[6047]="dan malam apabila menutupinya,";
+IndBaTxt[6048]="dan langit serta pembinaannya,";
+IndBaTxt[6049]="dan bumi serta penghamparannya,";
+IndBaTxt[6050]="dan jiwa serta penyempurnaannya (ciptaannya),";
+IndBaTxt[6051]="maka Allah mengilhamkan kepada jiwa itu (jalan) kefasikan dan ketakwaannya.";
+IndBaTxt[6052]="sesungguhnya beruntunglah orang yang mensucikan jiwa itu,";
+IndBaTxt[6053]="dan sesungguhnya merugilah orang yang mengotorinya.";
+IndBaTxt[6054]="(Kaum) Tsamud telah mendustakan (rasulnya) karena mereka melampaui batas,";
+IndBaTxt[6055]="ketika bangkit orang yang paling celaka di antara mereka,";
+IndBaTxt[6056]="lalu Rasul Allah (Saleh) berkata kepada mereka: (\"Biarkanlah) unta betina Allah dan minumannya\".";
+IndBaTxt[6057]="Lalu mereka mendustakannya dan menyembelih unta itu, maka Tuhan mereka membinasakan mereka disebabkan dosa mereka, lalu Allah menyama-ratakan mereka (dengan tanah),";
+IndBaTxt[6058]="dan Allah tidak takut terhadap akibat tindakan-Nya itu.";
+tloaded[91]['id.indonesian']=1;

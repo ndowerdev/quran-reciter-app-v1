@@ -1,0 +1,9 @@
+IndBaTxt[6131]="Orang-orang kafir yakni ahli Kitab dan orang-orang musyrik (mengatakan bahwa mereka) tidak akan meninggalkan (agamanya) sebelum datang kepada mereka bukti yang nyata,";
+IndBaTxt[6132]="(yaitu) seorang Rasul dari Allah (Muhammad) yang membacakan lembaran-lembaran yang disucikan (Al Quran),";
+IndBaTxt[6133]="di dalamnya terdapat (isi) Kitab-kitab yang lurus.";
+IndBaTxt[6134]="Dan tidaklah berpecah belah orang-orang yang didatangkan Al Kitab (kepada mereka) melainkan sesudah datang kepada mereka bukti yang nyata.";
+IndBaTxt[6135]="Padahal mereka tidak disuruh kecuali supaya menyembah Allah dengan memurnikan ketaatan kepada-Nya dalam (menjalankan) agama yang lurus, dan supaya mereka mendirikan shalat dan menunaikan zakat; dan yang demikian itulah agama yang lurus.";
+IndBaTxt[6136]="Sesungguhnya orang-orang yang kafir yakni ahli Kitab dan orang-orang yang musyrik (akan masuk) ke neraka Jahannam; mereka kekal di dalamnya. Mereka itu adalah seburuk-buruk makhluk.";
+IndBaTxt[6137]="Sesungguhnya orang-orang yang beriman dan mengerjakan amal saleh, mereka itu adalah sebaik-baik makhluk.";
+IndBaTxt[6138]="Balasan mereka di sisi Tuhan mereka ialah surga 'Adn yang mengalir di bawahnya sungai-sungai; mereka kekal di dalamnya selama-lamanya. Allah ridha terhadap mereka dan merekapun ridha kepada-Nya. Yang demikian itu adalah (balasan) bagi orang yang takut kepada Tuhannya.";
+tloaded[98]['id.indonesian']=1;

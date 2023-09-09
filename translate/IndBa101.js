@@ -1,0 +1,12 @@
+IndBaTxt[6158]="Hari Kiamat,";
+IndBaTxt[6159]="apakah hari Kiamat itu?";
+IndBaTxt[6160]="Tahukah kamu apakah hari Kiamat itu?";
+IndBaTxt[6161]="Pada hari itu manusia adalah seperti anai-anai yang bertebaran,";
+IndBaTxt[6162]="dan gunung-gunung adalah seperti bulu yang dihambur-hamburkan.";
+IndBaTxt[6163]="Dan adapun orang-orang yang berat timbangan (kebaikan)nya,";
+IndBaTxt[6164]="maka dia berada dalam kehidupan yang memuaskan.";
+IndBaTxt[6165]="Dan adapun orang-orang yang ringan timbangan (kebaikan)nya,";
+IndBaTxt[6166]="maka tempat kembalinya adalah neraka Hawiyah.";
+IndBaTxt[6167]="Tahukah kamu apakah neraka Hawiyah itu?";
+IndBaTxt[6168]="(Yaitu) api yang sangat panas.";
+tloaded[101]['id.indonesian']=1;

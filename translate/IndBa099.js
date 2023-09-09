@@ -1,0 +1,9 @@
+IndBaTxt[6139]="Apabila bumi digoncangkan dengan goncangan (yang dahsyat),";
+IndBaTxt[6140]="dan bumi telah mengeluarkan beban-beban berat (yang dikandung)nya,";
+IndBaTxt[6141]="dan manusia bertanya: \"Mengapa bumi (menjadi begini)?\",";
+IndBaTxt[6142]="pada hari itu bumi menceritakan beritanya,";
+IndBaTxt[6143]="karena sesungguhnya Tuhanmu telah memerintahkan (yang sedemikian itu) kepadanya.";
+IndBaTxt[6144]="Pada hari itu manusia ke luar dari kuburnya dalam keadaan bermacam-macam, supaya diperlihatkan kepada mereka (balasan) pekerjaan mereka,";
+IndBaTxt[6145]="Barangsiapa yang mengerjakan kebaikan seberat dzarrahpun, niscaya dia akan melihat (balasan)nya.";
+IndBaTxt[6146]="Dan barangsiapa yang mengerjakan kejahatan sebesar dzarrahpun, niscaya dia akan melihat (balasan)nya pula.";
+tloaded[99]['id.indonesian']=1;

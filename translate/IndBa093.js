@@ -1,0 +1,12 @@
+IndBaTxt[6080]="Demi waktu matahari sepenggalahan naik,";
+IndBaTxt[6081]="dan demi malam apabila telah sunyi (gelap),";
+IndBaTxt[6082]="Tuhanmu tiada meninggalkan kamu dan tiada (pula) benci kepadamu.";
+IndBaTxt[6083]="Dan sesungguhnya hari kemudian itu lebih baik bagimu daripada yang sekarang (permulaan).";
+IndBaTxt[6084]="Dan kelak Tuhanmu pasti memberikan karunia-Nya kepadamu, lalu (hati) kamu menjadi puas.";
+IndBaTxt[6085]="Bukankah Dia mendapatimu sebagai seorang yatim, lalu Dia melindungimu?";
+IndBaTxt[6086]="Dan Dia mendapatimu sebagai seorang yang bingung, lalu Dia memberikan petunjuk.";
+IndBaTxt[6087]="Dan Dia mendapatimu sebagai seorang yang kekurangan, lalu Dia memberikan kecukupan.";
+IndBaTxt[6088]="Sebab itu, terhadap anak yatim janganlah kamu berlaku sewenang-wenang.";
+IndBaTxt[6089]="Dan terhadap orang yang minta-minta, janganlah kamu menghardiknya.";
+IndBaTxt[6090]="Dan terhadap nikmat Tuhanmu, maka hendaklah kamu siarkan.";
+tloaded[93]['id.indonesian']=1;

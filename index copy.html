@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aplikasi Quran Untuk Iphone - Ipad - Android - Tablets - Online</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="description" content="Aplikasi belajar Quran online, Ipad - Iphone - Android, Penghafal Kata Demi Kata, Alat Penghafal, Dengan Terjemahan, Penghafal Otomatis" />
+    <meta http-equiv="keywords" content="Aplikasi Quran Untuk - Iphone - Ipad - Android - Kata Demi Kata, Program Quran Untuk Perangkat Seluler, Mendengarkan Bacaan Quran Di Iphone Ipad, Perangkat Lunak Qari Otomatis, Qari," />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script language="javascript" type="text/javascript">
+      function checkIt(string) {
+        var name = navigator.userAgent.toLowerCase().indexOf(string) + 1;
+        return name;
+      }
+      var isMobile = {
+        Android: function () {
+          return navigator.userAgent.match(/Android/i) ? true : false;
+        },
+        BlackBerry: function () {
+          return navigator.userAgent.match(/BlackBerry/i) ? true : false;
+        },
+        iOS: function () {
+          return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+        },
+        Windows: function () {
+          return navigator.userAgent.match(/IEMobile/i) ? true : false;
+        },
+        Nokia: function () {
+          return navigator.userAgent.match(/Nokia/i) ? true : false;
+        },
+        Symbian: function () {
+          return navigator.userAgent.match(/SymbianOS/i) ? true : false;
+        },
+        BenQ: function () {
+          return navigator.userAgent.match(/BenQ/i) ? true : false;
+        },
+        webOS: function () {
+          return navigator.userAgent.match(/webOS/i) ? true : false;
+        },
+        ZuneWP7: function () {
+          return navigator.userAgent.match(/ZuneWP7/i) ? true : false;
+        },
+        any: function () {
+          return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows() || isMobile.webOS() || isMobile.BenQ() || isMobile.Symbian() || isMobile.Nokia() || isMobile.iOS() || isMobile.ZuneWP7();
+        },
+      };
+    </script>
+
+    <script language="JavaScript">
+      if (checkIt("msie")) {
+        document.write("<" + 'link rel="stylesheet" href="/assets/css/IEfont2.css"/>');
+      } else {
+        document.write("<" + 'link rel="stylesheet" href="/assets/css/FontTTF2.css"/>');
+      }
+    </script>
+
+    <script type="text/javascript" src="/assets/mobile/lib/jquery.min.js"></script>
+    <link href="/assets/mobile/Stylemobile.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/mobile/skin/jplayerMB-1.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //Default Action
+        $(".tab_content").hide(); //Hide all content
+        $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+        $(".tab_content:first").show(); //Show first tab content
+        $("#BackButton").hide();
+        $("body:last").addClass("BodyH");
+        //On Click Event
+        $("div.RightTopB").click(function () {
+          $("div.RightTopB").removeClass("active"); //Remove any "active" class
+          $(this).addClass("active"); //Add "active" class to selected tab
+          $(".tab_content").hide(); //Hide all tab content
+          var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+          $(activeTab).fadeIn(); //Fade in the active content
+          if (activeTab == "#tab1") {
+            $("body:last").addClass("BodyH");
+            $("#footer").show();
+            $("#BackButton").hide();
+            $("#setButton").show();
+            HideURLbar();
+            lightCurr();
+          }
+          if (activeTab == "#tab2") {
+            $("body:last").removeClass("BodyH");
+            $("#footer").hide();
+            $("#setButton").hide();
+            $("#BackButton").show();
+          }
+          return false;
+        });
+      });
+    </script>
+    <script type="text/javascript" src="/assets/mobile/jplayer2v1/jquery.jplayer2.js"></script>
+    <script src="/assets/mobile/js/jquery.scrollTo-1.4.2-min.js"></script>
+    <script src="/assets/mobile/js2/recitorMB9.js"></script>
+    <script src="/assets/mobile/audioMbJP4.js"></script>
+    <script src="/assets/mobile/setupMB.js"></script>
+    <script src="/assets/mobile/optionsMB.js"></script>
+    <script src="/assets/mobile/js2/quranSetup.js"></script>
+    <script src="/text/qtext01.js"></script>
+    <script src="/include/001.js"></script>
+    <script src="/assets/mobile/displayMB.js"></script>
+    <script src="/assets/mobile/XXX.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        setUp();
+        setupToools("QT");
+      });
+      qurranSura;
+    </script>
+
+    <script type="text/javascript" src="/assets/mobile/iscroll.js"></script>
+
+    <script type="text/javascript">
+      //addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      function HideURLbar() {
+        if (navigator.userAgent.match(/iPhone/i)) {
+          window.scrollTo(0, 1);
+        } else {
+          window.scrollTo(0, 0);
+          // reset in case prev not scrolled
+          var nPageH = $(document).height();
+          var nViewH = window.outerHeight;
+          if (nViewH > nPageH) {
+            nViewH -= 250;
+            $("BODY").css("height", nViewH + "px");
+          }
+          window.scrollTo(0, 1);
+        }
+      }
+    </script>
+
+    <script type="application/x-javascript">
+
+      addEventListener("load", function(){setTimeout(HideURLbar(), 0);}, false);
+
+      setInterval(HideURLbar(), 100);
+    </script>
+
+    <script type="text/javascript">
+      if (isMobile.any()) {
+        var myScroll;
+
+        function loaded() {
+          myScroll = new iScroll("wrapper", {
+            checkDOMChanges: true,
+          });
+        }
+        document.addEventListener("DOMContentLoaded", loaded, false);
+      }
+    </script>
+    <style>
+      .transT {
+        font-family: Open Sans, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header">
+      <!-- <div id="sname"></div> --->
+      <div class="RightTopB" id="setButton"><a href="#tab2">&nbsp;||||&nbsp;</a></div>
+      <div class="RightTopB" id="BackButton"><a href="#tab1">«</a></div>
+      <div class="LeftTop">
+        <select class="dropMenu2" id="ssura"></select
+        ><span id="SurahFrmTo"
+          ><select class="dropMenu" id="astart"></select
+          ><select class="dropMenu" id="aend"></select
+        ></span>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="tab1" class="tab_content">
+        <div id="maintext" onMouseOver="this.style.cursor='pointer';"></div>
+        <div id="push"></div>
+      </div>
+    </div>
+    <div id="tab2" class="tab_content">
+      <div id="settings">
+        <ul onclick="toggleHideShow('#ToolSelection')" class="graytitle">
+          Tool Selection
+          <span class="arrow">></span>
+        </ul>
+        <ul style="display: none" id="ToolSelection">
+          <li><input name="MemorizeOption" type="checkbox" id="TurnMemorizeOn" onClick="setupToools('MT')" />Memorization Tool</li>
+          <li><input name="MemorizeOption" type="checkbox" id="Qteacher" onClick="setupToools('QT')" />Quran Teacher [word by word]</li>
+          <li><input name="MemorizeOption" type="checkbox" checked="" id="NormalR" onClick="setupToools('NR')" />Normal Reciter [verse by verse]</li>
+        </ul>
+        <div id="Memo_play_panel">
+          <ul onclick="toggleHideShow('#MOptions')" class="graytitle">
+            Memorazation Tool Options<span class="arrow">></span>
+          </ul>
+          <div style="display: none" id="MOptions">
+            <ul>
+              <li>
+                <input onchange="updateMemorizationData()" id="mo" name="MemoMode" value="1" checked="checked" type="radio" />Memorize mode
+                <span><input onchange="updateMemorizationData();" name="Memorize&Test" type="checkbox" id="MemorizeTestOn" onchange="MemorizeTestMode = $('#MemorizeTestOn').is(':checked')" />w Test</span>
+              </li>
+              <li><input onchange="updateMemorizationData();" id="mo" name="MemoMode" value="2" type="radio" />Test mode</li>
+              <li><input onchange="updateMemorizationData();" id="mo" name="MemoMode" value="3" type="radio" />Review mode</li>
+
+              <li>
+                Repeat (Test/Review):<select class="selectWth30" id="Repeat_MemoSelect" name="MemoSelection_repeat" onchange="updateExtraOptions()">
+                  <option value="1">No Repeat</option>
+                  <option value="2" selected="selected">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                </select>
+              </li>
+            </ul>
+            <ul>
+              <span class="ulTitle"><em>Select verses to memorize</em></span>
+              <li>
+                From verse:<select id="astartMemo" class="selectWth25" onchange="GoTo();updateMemorizationData()"></select>
+                <span>To:<select id="aendMemo" class="selectWth25" onchange="updateMemoEndVerse()"></select></span>
+              </li>
+              <li><input class="selectWth30" type="text" id="MemoTotalverses" value="4" onblur="isNumeric(document.getElementById('MemoTotalverses'), 'Numbers only please (Bigger than 0)')" /><span>verses</span></li>
+            </ul>
+            <ul>
+              <li>
+                Memorize in group of:<select class="selectWth30" id="MemoGRP" onchange="updateMemorizationData();">
+                  <option value="1" selected="selected">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option></select
+                ><span>Verse(s)</span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <input name="MemoNextRange" type="checkbox" id="AutoNextMemoRange" onblur="AutoPlyNxtMemoRng = $('#AutoNextMemoRange').is(':checked')" />Auto-Play next Range<img
+                  style="float: right"
+                  src="/assets/mobile/img/forward.gif"
+                  align="top"
+                  title="Next Range"
+                  alt="Next Range"
+                  onclick="clearhighlight();NextMemorizationData();GoTo()"
+                  width="28"
+                  height="20"
+                />
+              </li>
+            </ul>
+            <ul>
+              <span class="ulTitle"><em>Stage Repetitions</em></span>
+              <li>
+                1-Repeat verse
+                <select class="selectWth30" id="Repeat_MemoVerse" name="MemoVerse_repeat" onchange="updateAllValues()">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8" selected="selected">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                </select>
+              </li>
+              <li>
+                2-Repeat group
+                <select class="selectWth30" id="Repeat_MemoGRP" name="MemoSelection_repeat" onchange="updateAllValues()">
+                  <option value="0">Off</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3" selected="selected">3</option>
+                  <option value="4">4</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                </select>
+              </li>
+              <li>
+                3-Repeat active range<select class="selectWth30" id="Rpt_CurrMemoRange" name="Repeat_CurrMemoRange" onchange="updateAllValues()">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4" selected="selected">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                </select>
+              </li>
+              <li><input type="button" value="Extra Options" onMouseOver="this.style.cursor='pointer';" onclick="toggleHideShow('#extraMemoOptions')" /></li>
+            </ul>
+            <ul class="MoreOp" id="extraMemoOptions">
+              <li>
+                Add extra pause time:<select class="selectWth25" id="extraPause" onchange="updateExtraOptions()">
+                  <option value="0" selected="selected">0 (s)</option>
+                  <option value="0.2">0.2(s)</option>
+                  <option value="0.4">0.4(s)</option>
+                  <option value="0.6">0.6(s)</option>
+                  <option value="0.7">0.7(s)</option>
+                  <option value="0.9">0.9(s)</option>
+                  <option value="1">1(s)</option>
+                  <option value="1.2">1.2(s)</option>
+                  <option value="1.5">1.5(s)</option>
+                  <option value="1.7">1.7(s)</option>
+                  <option value="2">2(s)</option>
+                  <option value="4">4(s)</option>
+                  <option value="5">5(s)</option>
+                  <option value="10">10(s)</option>
+                  <option value="20">20(s)</option>
+                  <option value="25">25(s)</option>
+                  <option value="30">30(s)</option>
+                  <option value="100">100(s)</option>
+                  <option value="200">200(s)</option>
+                  <option value="-1">-1(s)</option>
+                  <option value="-1.5">-1.5(s)</option>
+                  <option value="-2">-2(s)</option>
+                </select>
+              </li>
+              <span class="ulTitle"><em>For stage 2 &amp; 3</em></span>
+              <li>
+                Pause for first
+                <select id="PausePerRound" class="selectWth25" onchange="updateExtraOptions()">
+                  <option value="1" selected="selected">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option></select
+                >Round(s)
+              </li>
+              <span class="ulTitle"><em>For stage 1 & review mode</em></span>
+              <li><input id="Mem3" name="MemoMethod" value="1" checked="checked" type="radio" />Pausing ON</li>
+              <li><input id="Mem2" name="MemoMethod" value="3" type="radio" />Pausing OFF</li>
+              <li><input id="Mem1" name="MemoMethod" value="2" type="radio" />Pausing ON w extra setting</li>
+            </ul>
+          </div>
+        </div>
+        <ul onclick="toggleHideShow('#TransDiv')" class="graytitle">
+          Translation Selection<span class="arrow">></span>
+        </ul>
+        <ul style="display: none" id="TransDiv">
+          <li>
+            <select class="selectWth100" id="trans">
+              <option value="ar.muyassar">Arabic: تفسير المیسر</option>
+              <option value="5">Arabic: تفسير الجلالين</option>
+              <option value="en.sahih">English: Sahih International</option>
+              <option value="3">English: Muhsin & Hilali</option>
+              <option value="1">English: Pickthall</option>
+              <option value="2">English: Qaribullah</option>
+              <option value="0">English: Yusuf Ali</option>
+              <option value="en.maududi">English: Maududi</option>
+              <option value="en.shakir">English: Shakir</option>
+              <option value="en.ahmedali">English: Ahmed Ali</option>
+              <option value="en.transliteration">English: Transliteration</option>
+              <option value="sq.nahi">Albanian: Efendi Nahi</option>
+              <option value="sq.mehdiu">Albanian: Feti Mehdiu</option>
+              <option value="sq.ahmeti">Albanian: Sherif Ahmeti</option>
+              <option value="az.mammadaliyev">Azerbaijani: Məmmədəliyev &amp; Bünyadov</option>
+              <option value="az.musayev">Azerbaijani: Musayev</option>
+              <option value="bn.bengali">Bengali: মুহিউদ্দীন খান</option>
+              <option value="bs.korkut">Bosnian: Korkut</option>
+              <option value="bs.mlivo">Bosnian: Mlivo</option>
+              <option value="bg.theophanov">Bulgarian: Теофанов</option>
+              <option value="ch.jian">Chinese: Ma Jian</option>
+              <option value="cs.hrbek">Czech: Hrbek</option>
+              <option value="cs.nykl">Czech: Nykl</option>
+              <option value="dv.divehi">Divehi: ދިވެހި</option>
+              <option value="nl.keyzer">Dutch: Keyzer</option>
+              <option value="fr.hamidullah">French: Hamidullah</option>
+              <option value="de.aburida">German: Abu Rida</option>
+              <option value="de.bubenheim">German: Bubenheim &amp; Elyas</option>
+              <option value="de.khoury">German: Khoury</option>
+              <option value="de.zaidan">German: Zaidan</option>
+              <option value="ha.gumi">Hausa: Gumi</option>
+              <option value="hi.hindi">Hindi: हिन्दी</option>
+              <option value="id.indonesian" selected="selected">Indonesian: Bahasa Indonesia</option>
+              <option value="it.piccardo">Italian: Piccardo</option>
+              <option value="ja.japanese">Japanese: Japanese</option>
+              <option value="ku.asan">Kurdish: ته‌فسیری ئاسان</option>
+              <option value="ko.korean">Korean: Korean</option>
+              <option value="4">Malay</option>
+              <option value="ml.abdulhameed">Malayalam: അബ്ദുല്‍ ഹമീദ് &amp; പറപ്പൂര്‍</option>
+              <option value="no.berg">Norwegian: Einar Berg</option>
+              <option value="fa.ghomshei">Persian: الهی قمشه‌ای</option>
+              <option value="fa.ansarian">Persian: انصاریان</option>
+              <option value="fa.ayati">Persian: آیتی</option>
+              <option value="fa.fooladvand">Persian: فولادوند</option>
+              <option value="fa.moezzi">Persian: معزی</option>
+              <option value="fa.makarem">Persian: مکارم شیرازی</option>
+              <option value="pl.bielawskiego">Polish: Bielawskiego</option>
+              <option value="pt.elhayek">Portuguese: El-Hayek</option>
+              <option value="ro.grigore">Romanian: Grigore</option>
+              <option value="ru.abuadel">Russian: Абу Адель</option>
+              <option value="ru.muntahab">Russian: Аль-Мунтахаб</option>
+              <option value="ru.krachkovsky">Russian: Крачковский</option>
+              <option value="ru.kuliev">Russian: Кулиев</option>
+              <option value="ru.osmanov">Russian: Османов</option>
+              <option value="ru.porokhova">Russian: Порохова</option>
+              <option value="sd.amroti">Sindhi: امروٽي</option>
+              <option value="so.abduh">Somali: Abduh</option>
+              <option value="es.asad">Spanish: Asad</option>
+              <option value="es.cortes">Spanish: Cortes</option>
+              <option value="sw.barwani">Swahili: Al-Barwani</option>
+              <option value="sv.bernstrom">Swedish: Bernström</option>
+              <option value="tg.ayati">Tajik: Оятӣ</option>
+              <option value="ta.tamil">Tamil: தமிழ்</option>
+              <option value="tt.nugman">Tatar: Yakub Ibn Nugman</option>
+              <option value="th.thai">Thai: ภาษาไทย</option>
+              <option value="tr.golpinarli">Turkish: Abdulbakî Gölpınarlı</option>
+              <option value="tr.bulac">Turkish: Alİ Bulaç</option>
+              <option value="tr.transliteration">Turkish: Çeviriyazı</option>
+              <option value="tr.diyanet">Turkish: Diyanet İşleri</option>
+              <option value="tr.vakfi">Turkish: Diyanet Vakfı</option>
+              <option value="tr.yuksel">Turkish: Edip Yüksel</option>
+              <option value="tr.yazir">Turkish: Elmalılı Hamdi Yazır</option>
+              <option value="tr.ozturk">Turkish: Öztürk</option>
+              <option value="tr.yildirim">Turkish: Suat Yıldırım</option>
+              <option value="tr.ates">Turkish: Süleyman Ateş</option>
+              <option value="ur.kanzuliman">Urdu: احمد رضا خان</option>
+              <option value="ur.ahmedali">Urdu: احمد علی</option>
+              <option value="ur.jalandhry">Urdu: جالندہری</option>
+              <option value="ur.qadri">Urdu: طاہر القادری</option>
+              <option value="ur.jawadi">Urdu: علامہ جوادی</option>
+              <option value="ug.saleh">Uyghur: محمد صالح</option>
+              <option value="uz.sodik">Uzbek: Мухаммад Содик</option>
+            </select>
+          </li>
+        </ul>
+        <ul onclick="toggleHideShow('#LayoutStyle')" class="graytitle">
+          Layout Options [Quran - Translation]<span class="arrow">></span>
+        </ul>
+        <ul style="display: none" id="LayoutStyle">
+          <li>
+            <select class="selectWth100" id="Seleclayout" onChange="changelayout()">
+              <option selected="" value="1">Quran and Translation/line</option>
+              <option value="2">Quran/line</option>
+              <option value="3">Musaff Style</option>
+              <option value="4">Translation/line</option>
+            </select>
+          </li>
+        </ul>
+        <div id="playOption">
+          <ul onclick="toggleHideShow('#playingMode')" class="graytitle">
+            Play mode [word by word]<span class="arrow">></span>
+          </ul>
+          <ul style="display: none" id="playingMode">
+            <li id="plyWord"><input onchange="updateAllValues();" id="Radio1" name="mode" value="1" type="radio" />Word by Word</li>
+            <li id="plyVerse"><input onchange="updateAllValues();" id="Radio2" name="mode" value="2" checked="checked" type="radio" />Verse by verse</li>
+            <li id="plyWV"><input onchange="updateAllValues();" id="Radio3" name="mode" value="3" type="radio" />Word and verse</li>
+          </ul>
+        </div>
+        <div id="repeat_options_Panal">
+          <ul onclick="toggleHideShow('#Repetitions')" class="graytitle">
+            Repetitions Options<span class="arrow">></span>
+          </ul>
+          <ul style="display: none" id="Repetitions">
+            <li>
+              Word:&nbsp;<select id="rw" name="wrepeat" class="selectWth70">
+                <option value="1" selected="selected">No Repeat(Teacher Mode)</option>
+                <option value="1000">Loop</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+              </select>
+            </li>
+            <li>
+              Verse:&nbsp;<select id="rv" name="vrepeat" class="selectWth70">
+                <option value="1" selected="selected">No Repeat</option>
+                <option value="1000">Loop</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+              </select>
+            </li>
+            <li>
+              Range:&nbsp;<select id="rs" name="srepeat" class="selectWth70">
+                <option value="1" selected="selected">No Repeat</option>
+                <option value="1000">Loop</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <div id="pauseOptions">
+          <ul onclick="toggleHideShow('#learningOp')" class="graytitle">
+            Pausing between verses
+            <span class="arrow">></span>
+          </ul>
+          <ul id="learningOp" style="display: none">
+            <li><input onchange="updateAllValues();" id="pc" name="pause" value="1" checked="checked" type="radio" />Continuous recitation</li>
+            <li>
+              <input onchange="updateAllValues();" id="pp" name="pause" value="2" type="radio" /><span>Duration of verse +</span
+              ><select class="selectWth30" id="p_o" name="p_o" class="">
+                <option value="0" selected="selected">0 (s)</option>
+                <option value=".2">0.2(s)</option>
+                <option value=".3">0.3(s)</option>
+                <option value=".4">0.4(s)</option>
+                <option value=".5">0.5(s)</option>
+                <option value=".6">0.6(s)</option>
+                <option value=".7">0.7(s)</option>
+                <option value=".8">0.8(s)</option>
+                <option value=".9">0.9(s)</option>
+                <option value="1">1(s)</option>
+                <option value="1.5">1.5(s)</option>
+                <option value="1.8">1.8(s)</option>
+                <option value="2">2(s)</option>
+                <option value="3">3(s)</option>
+                <option value="4">4(s)</option>
+                <option value="4.5">4.5(s)</option>
+                <option value="30">30(s)</option>
+                <option value="60">60(s)</option>
+                <option value="-0.2">-0.2(s)</option>
+                <option value="-0.3">-0.3(s)</option>
+                <option value="-0.4">-0.4(s)</option>
+                <option value="-0.5">-0.5(s)</option>
+                <option value="-0.6">-0.6(s)</option>
+                <option value="-0.7">-0.7(s)</option>
+                <option value="-0.8">-0.8(s)</option>
+                <option value="-0.9">-0.9(s)</option>
+                <option value="-1">-1(s)</option>
+                <option value="-1.5">-1.5(s)</option>
+                <option value="-2.9">-2.9(s)</option>
+              </select>
+            </li>
+            <li>
+              <input onchange="updateAllValues();" id="pr" name="pause" value="4" type="radio" />Learn/Practice reading
+              <div id="">
+                <select name="Normal" id="ReadingLevel" style="width: 100%" class="selectWth100">
+                  <option value="1">Normal reading level</option>
+                  <option value="1.3">Intermediate level 5</option>
+                  <option value="1.5">Intermediate level 4</option>
+                  <option value="1.7" selected="selected">Intermediate level 3</option>
+                  <option value="2">Intermediate level 2</option>
+                  <option value="2.3">Intermediate level 1</option>
+                  <option value="2.5">Beginner level 4</option>
+                  <option value="2.8">Beginner level 3</option>
+                  <option value="3.3">Beginner level 2</option>
+                  <option value="3.8">Beginner level 1</option>
+                  <option value="4.5">Still learning level 3</option>
+                  <option value="5.5">Still learning level 2</option>
+                  <option value="6.5">Still learning level 1</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-----Auto Play---->
+        <ul onclick="toggleHideShow('#autoplyDiv')" class="graytitle">
+          Auto Play Options
+          <span class="arrow">></span>
+        </ul>
+        <div style="display: none" id="autoplyDiv">
+          <div id="AutoPlyInfo">
+            <p align="center"><input style="color: red; width: 138px" type="button" value="Disable Auto Play" onclick=" DisableAutoPlay();" /><br /></p>
+            <input name="Checkbox1" type="checkbox" id="DefaultOrdr" onclick="$('#DefaultOrdr').attr('checked', true);$('#UserAutoSel').attr('checked', false);" />Auto Play based on default Quran order
+            <br />
+            <input name="Checkbox2" type="checkbox" id="UserAutoSel" onclick="$('#DefaultOrdr').attr('checked', false);$('#UserAutoSel').attr('checked', true);" />Auto Play based on your selection below
+            <br />
+            <br />
+          </div>
+          <div style="float: left; width: 200px"><select id="ssuralist" onMouseOver="this.style.cursor='pointer';" onChange="fillSuraSel();"></select></div>
+          <div style="float: left; width: 200px">
+            <select id="SelList" onMouseOver="this.style.cursor='pointer';" onChange=" RemoveItem()">
+              <option>Selected Surahs</option>
+            </select>
+            <input type="button" value="Reset List" onclick="RemoveList();" />
+          </div>
+          <br /><br /><br />
+          <div align="center"><input class="AutoPlyInput" type="button" value="Submit" onMouseOver="this.style.cursor='pointer';" onclick="SubmitSelc();" /></div>
+        </div>
+        <div id="">
+          <ul style="display: none" onclick="toggleHideShow('#CrossVerses')" class="graytitle">
+            Crossfading of verses
+            <span class="arrow">></span>
+          </ul>
+          <ul style="display: none" id="CrossVerses">
+            <li>
+              <div id="SpeedOptmize" class="content">
+                <select class="selectWth100" name="Normal1" id="connectionspeed">
+                  <option value="150">Short1 (-0.15s)</option>
+                  <option value="350">Short2 (-0.35s)</option>
+                  <option value="400">Short3 (-0.4s)</option>
+                  <option value="500">Short4 (-0.5s)</option>
+                  <option value="550" selected="selected">Default (-0.55s)</option>
+                  <option value="600">Short5 (-0.6s)</option>
+                  <option value="700">Short6 (-0.7s)</option>
+                  <option value="800">Very Short1 (-0.8s)</option>
+                  <option value="850">Very Short2 (-0.85s)</option>
+                  <option value="900">Very Short3 (-0.9s)</option>
+                  <option value="1000">Very Short4 (-1.0s)</option>
+                  <option value="1200">Really Short1 (-1.2s)</option>
+                  <option value="1500">Really Short2 (-1.5s)</option>
+                  <option value="2000">Really Short3 (-2s)</option>
+                  <option value="2000">Really Short3 (-2s)</option>
+                  <option value="-500">Long1 (+.5s)</option>
+                  <option value="-1000">Long2 (+1s)</option>
+                  <option value="-2000">Long3 (+2s)</option>
+                  <option value="-3500">Long4 (+3.5s)</option>
+                  <option value="-4000">Long5 (+4s)</option>
+                  <option value="-5500">Very Long1 (+5.5s)</option>
+                  <option value="-8000">Very Long2 (+8s)</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <ul onclick="toggleHideShow('#FontRelated')" class="graytitle">
+          Font<span class="arrow">></span>
+        </ul>
+        <ul style="display: none" id="FontRelated">
+          <li>
+            <select id="fontface" class="selectWth100">
+              <option selected="selected">me_quranR3HOQ</option>
+              <option>me_quranKer6</option>
+              <option>me_quran</option>
+              <option>Simplified Arabic</option>
+              <option>DejaVu Sans</option>
+              <option>_PDMS_Saleem_QuranFont</option>
+              <option>Tahoma</option>
+              <option>Helvetica</option>
+            </select>
+          </li>
+          <li>
+            <img width="35px" height="28px" id="small" onClick="fontsizeChng(id)" src="/assets/mobile/img/zoomOutIcon2.png" title="Zoom Out" alt="Zoom Out" />&nbsp;<img
+              width="35px"
+              height="28px"
+              id="large"
+              onClick="fontsizeChng(id)"
+              src="/assets/mobile/img/zoomInIcon2.png"
+              title="Zoom In"
+              alt="Zoom In"
+            /><span id="FntSizeDemoEn">Guide</span>&nbsp;<span id="FntSizeDemoAr">عَلَيْهِمْ</span>
+          </li>
+        </ul>
+
+        <div style="display: none" id="d_display_panel">
+          <ul style="display: none" onclick="toggleHideShow('#DisplySelc')" class="graytitle">
+            Display Options
+            <span class="arrow">></span>
+          </ul>
+          <ul style="display: none" id="DisplySelc" class="AutoPlyInfo">
+            <li style="display: none">
+              Align:<select id="just" class="selectWth30">
+                <option selected="selected">center</option>
+                <option>right</option>
+                <option>justify</option>
+              </select>
+            </li>
+            <li style="display: none">Verses Per Page:<input class="selectWth30" type="text" id="maxverse" value="286" name="MaxVerses" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="jp-audio">
+        <div class="jp-type-playlist">
+          <div id="jp_interface_1" class="jp-interface">
+            <ul class="jp-controls">
+              <li><a href="#" onclick="WhereToStartPly()" class="jp-play" tabindex="1">play</a></li>
+              <li><a href="#" onclick="clearTimings()" class="jp-pause" tabindex="1">pause</a></li>
+              <li><a href="#" class="jp-stop" tabindex="1" onclick="stopall()">stop</a></li>
+              <li><a href="#" class="jp-previous" tabindex="1" onclick="GoToPreviousVerse()">previous</a></li>
+              <li><a href="#" class="jp-next" tabindex="1" onclick="GoToNextVerse()">next</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="jp-type-playlist" style="display: none">
+          <div id="jp_interface_3" class="jp-interface">
+            <ul class="jp-controls">
+              <li><a href="#" class="jp-play" tabindex="1">play</a></li>
+              <li><a href="#" class="jp-pause" tabindex="1">pause</a></li>
+              <li><a href="#" class="jp-stop" tabindex="1" onclick="stopall()">stop</a></li>
+              <li><a href="#" class="jp-mute" tabindex="1">mute</a></li>
+              <li><a href="#" class="jp-unmute" tabindex="1">unmute</a></li>
+              <li><a href="#" class="jp-previous" tabindex="1" onclick="GoToPreviousVerse()">previous</a></li>
+              <li><a href="#" class="jp-next" tabindex="1" onclick="GoToNextVerse()">next</a></li>
+            </ul>
+            <div class="jp-progress">
+              <div class="jp-seek-bar">
+                <div class="jp-play-bar"></div>
+              </div>
+            </div>
+            <div style="display: none" class="jp-volume-bar">
+              <div class="jp-volume-bar-value"></div>
+            </div>
+            <div class="jp-current-time"></div>
+            <div class="jp-duration"></div>
+          </div>
+        </div>
+      </div>
+      <div class="RightBottom"><select class="RecdropMenu" id="srecitor"></select></div>
+    </div>
+    <div id="MediaPLYR" class="jp-jplayer"></div>
+    <div id="MediaPLYR3" class="jp-jplayer"></div>
+
+    <script language="Javascript">
+      setupMediaPlayers();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+IndBaTxt[5164]="Telah bertasbih kepada Allah apa saja yang ada di langit dan apa saja yang ada di bumi; dan Dialah Yang Maha Perkasa lagi Maha Bijaksana.";
+IndBaTxt[5165]="Wahai orang-orang yang beriman, kenapakah kamu mengatakan sesuatu yang tidak kamu kerjakan?";
+IndBaTxt[5166]="Amat besar kebencian di sisi Allah bahwa kamu mengatakan apa-apa yang tidak kamu kerjakan.";
+IndBaTxt[5167]="Sesungguhnya Allah menyukai orang yang berperang dijalan-Nya dalam barisan yang teratur seakan-akan mereka seperti suatu bangunan yang tersusun kokoh.";
+IndBaTxt[5168]="Dan (ingatlah) ketika Musa berkata kepada kaumnya: \"Hai kaumku, mengapa kamu menyakitiku, sedangkan kamu mengetahui bahwa sesungguhnya aku adalah utusan Allah kepadamu?\" Maka tatkala mereka berpaling (dari kebenaran), Allah memalingkan hati mereka; dan Allah tidak memberi petunjuk kepada kaum yang fasik.";
+IndBaTxt[5169]="Dan (ingatlah) ketika Isa ibnu Maryam berkata: \"Hai Bani Israil, sesungguhnya aku adalah utusan Allah kepadamu, membenarkan kitab sebelumku, yaitu Taurat, dan memberi khabar gembira dengan (datangnya) seorang Rasul yang akan datang sesudahku, yang namanya Ahmad (Muhammad)\". Maka tatkala rasul itu datang kepada mereka dengan membawa bukti-bukti yang nyata, mereka berkata: \"Ini adalah sihir yang nyata\".";
+IndBaTxt[5170]="Dan siapakah yang lebih zalim daripada orang yang mengada-adakan dusta terhadap Allah sedang dia diajak kepada Islam? Dan Allah tidak memberi petunjuk kepada orang-orang zalim.";
+IndBaTxt[5171]="Mereka ingin memadamkan cahaya Allah dengan mulut (tipu daya) mereka, tetapi Allah (justru) menyempurnakan cahaya-Nya, walau orang-orang kafir membencinya\".";
+IndBaTxt[5172]="Dialah yang mengutus Rasul-Nya dengan membawa petunjuk dan agama yang benar agar Dia memenangkannya di atas segala agama-agama meskipun orang musyrik membenci.";
+IndBaTxt[5173]="Hai orang-orang yang beriman, sukakah kamu aku tunjukkan suatu perniagaan yang dapat menyelamatkanmu dari azab yang pedih?";
+IndBaTxt[5174]="(yaitu) kamu beriman kepada Allah dan Rasul-Nya dan berjihad di jalan Allah dengan harta dan jiwamu. Itulah yang lebih baik bagimu, jika kamu mengetahui.";
+IndBaTxt[5175]="Niscaya Allah akan mengampuni dosa-dosamu dan memasukkanmu ke dalam jannah yang mengalir di bawahnya sungai-sungai; dan (memasukkan kamu) ke tempat tinggal yang baik di dalam jannah 'Adn. Itulah keberuntungan yang besar.";
+IndBaTxt[5176]="Dan (ada lagi) karunia yang lain yang kamu sukai (yaitu) pertolongan dari Allah dan kemenangan yang dekat (waktunya). Dan sampaikanlah berita gembira kepada orang-orang yang beriman.";
+IndBaTxt[5177]="Hai orang-orang yang beriman, jadilah kamu penolong (agama) Allah sebagaimana Isa ibnu Maryam telah berkata kepada pengikut-pengikutnya yang setia: \"Siapakah yang akan menjadi penolong-penolongku (untuk menegakkan agama) Allah?\" Pengikut-pengikut yang setia itu berkata: \"Kamilah penolong-penolong agama Allah\", lalu segolongan dari Bani Israil beriman dan segolongan lain kafir; maka Kami berikan kekuatan kepada orang-orang yang beriman terhadap musuh-musuh mereka, lalu mereka menjadi orang-orang yang menang.";
+tloaded[61]['id.indonesian']=1;

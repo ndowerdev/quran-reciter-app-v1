@@ -1,0 +1,12 @@
+IndBaTxt[6147]="Demi kuda perang yang berlari kencang dengan terengah-engah,";
+IndBaTxt[6148]="dan kuda yang mencetuskan api dengan pukulan (kuku kakinya),";
+IndBaTxt[6149]="dan kuda yang menyerang dengan tiba-tiba di waktu pagi,";
+IndBaTxt[6150]="maka ia menerbangkan debu,";
+IndBaTxt[6151]="dan menyerbu ke tengah-tengah kumpulan musuh,";
+IndBaTxt[6152]="sesungguhnya manusia itu sangat ingkar, tidak berterima kasih kepada Tuhannya,";
+IndBaTxt[6153]="dan sesungguhnya manusia itu menyaksikan (sendiri) keingkarannya,";
+IndBaTxt[6154]="dan sesungguhnya dia sangat bakhil karena cintanya kepada harta.";
+IndBaTxt[6155]="Maka apakah dia tidak mengetahui apabila dibangkitkan apa yang ada di dalam kubur,";
+IndBaTxt[6156]="dan dilahirkan apa yang ada di dalam dada,";
+IndBaTxt[6157]="sesungguhnya Tuhan mereka pada hari itu Maha Mengetahui keadaan mereka.";
+tloaded[100]['id.indonesian']=1;

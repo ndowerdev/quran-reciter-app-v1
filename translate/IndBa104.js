@@ -1,0 +1,10 @@
+IndBaTxt[6180]="Kecelakaanlah bagi setiap pengumpat lagi pencela,";
+IndBaTxt[6181]="yang mengumpulkan harta dan menghitung-hitung,";
+IndBaTxt[6182]="dia mengira bahwa hartanya itu dapat mengkekalkannya,";
+IndBaTxt[6183]="sekali-kali tidak! Sesungguhnya dia benar-benar akan dilemparkan ke dalam Huthamah.";
+IndBaTxt[6184]="Dan tahukah kamu apa Huthamah itu?";
+IndBaTxt[6185]="(yaitu) api (yang disediakan) Allah yang dinyalakan,";
+IndBaTxt[6186]="yang (membakar) sampai ke hati.";
+IndBaTxt[6187]="Sesungguhnya api itu ditutup rapat atas mereka,";
+IndBaTxt[6188]="(sedang mereka itu) diikat pada tiang-tiang yang panjang.";
+tloaded[104]['id.indonesian']=1;

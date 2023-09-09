@@ -1,0 +1,291 @@
+﻿.clear{
+		clear:both;
+		float:none;
+		height:0px;
+	}
+body, html
+	{
+		height:100%;
+		margin: 0px auto;
+	}
+	body
+	{
+		margin: 0px;
+		text-align: left;
+		FONT-FAMILY: MS Sans Serif, Verdana, Arial, Helvetica, sans-serif; 
+	    COLOR: #000000;
+	    TEXT-DECORATION: none;
+	    font-size: 9pt;
+		width:100%;
+	}
+	#dhtmltooltip{
+	   text-align: left;
+		font-family: Arial, Helvetica, sans-serif;
+		color: #FFFFE8;
+		font-size: 10pt;
+		position: absolute;
+		left: -145px;
+		width: 100px;
+		border: 2px solid green;
+		padding: 2px;
+		background-color:  #515151;
+		visibility: hidden;
+		z-index: 100;
+		/*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+		filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
+	}
+
+	#dhtmlpointer{
+		position:absolute;
+		left: -300px;
+		z-index: 101;
+		visibility: hidden;
+	}
+    .spacer{DISPLAY: block; HEIGHT: 4px;}
+	.spacerTop{DISPLAY: block; HEIGHT: 2px;}
+	.newItem{color:red;padding:3px;font-style:italic;}
+	#autoplyselc {
+     visibility:hidden ;
+     position: absolute;
+     left: 0px;
+     top: 15px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000; 
+    }
+    #autoplyDiv{
+     width:400px;
+     margin:0px auto;
+     background-color:   #FFFFFF; 
+	 border:6px solid  #00AE00;
+     padding:0;
+     text-align:center;
+    }
+	#autoPlyTop{background:  #00AE00; height:27px;} 
+	#AutoPlyInfo{padding-left:6px;font-size:10pt;font-weight:bold;color:  #666666;text-align: left;line-height:20px;}
+	#AutoplyRhdr{float:left; text-align:center; padding:3px;padding-top:2px; margin:0px auto;font-size:11pt;font-weight:bold;color: white}
+	#AutoplyLHdr{background:  #FFFFFF ;float:right;vertical-align:top; text-align:right;font-size:16px;color:red;font-weight:bold}
+	.AutoPlyInput{padding:2px;text-align:center;margin-top:8px;margin-bottom:8px;color:green; font-weight:bold;font-size:11pt;}
+	
+	
+ #content {
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+	background-color: #999999;
+}
+.footer {
+	FONT-FAMILY: MS Sans Serif, Verdana, Arial, Helvetica, sans-serif; 
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+	font-size: 8pt;
+
+	
+}
+.Surahmenubar {
+	border-right: 0px;
+	border-color: #C0C0C0;
+	border-style: solid;
+	text-align: center;
+	color:   #333333;
+	font-weight:bold;
+	font-size: 10pt;
+	background-color: #999999;
+	border-top-width: 13px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+}
+
+.myMenu {
+  border-style: none;
+  text-align: left;
+  font-size: 11pt;
+  width: 100%;
+}
+.myMenu h3 {
+	margin: 0;
+    padding: 2px;
+	border-style: solid none none solid;
+	border-color: #C0C0C0;
+	border-width: 2px 1px 1px 5px;
+	background: none repeat scroll 0% 50%;
+	color: #FFFFE8;
+	font-size: 13.4px;
+	font-weight: bold;
+	text-decoration: none;
+	FONT-FAMILY: Helvetica,MS Sans Serif, Verdana, Arial, Helvetica, sans-serif; 
+	background-color:   #4F4F4F;
+	height: 20px;
+}
+.myMenu h4 {
+    margin: 0;
+    margin-top: 4px;
+    border-top:  1px solid gray;
+  	border-right: 0px solid gray;
+	border-left:  0px solid gray;
+	FONT-FAMILY: Arial, Tahoma;
+	color: #FFFFE8;
+	font-size: 13.4px;
+	font-weight:bold;
+	text-decoration: none;
+	FONT-FAMILY: Helvetica,MS Sans Serif, Verdana, Arial, Helvetica, sans-serif; 
+	background-color:  #336600;
+	height: 20px;
+
+}
+
+.myMenu .content {
+	padding-top:2px;
+	padding-bottom:4px;
+	padding-left:2px;
+	padding-right:2px;
+	background: silver none repeat scroll 0% 50%;
+	font-size: 9pt;
+	background-color:    #606060;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align:middle;
+}
+#maintext {
+	border-color: #339966;
+	border-bottom: 25px solid silver;
+	border-left: 3px solid silver;
+	border-right: 3px solid silver;
+	border-top: 1px solid silver;
+	margin: 0px 0px 0px;
+	padding: 10px;
+	BACKGROUND-COLOR: #FFFFF4;
+	overflow: auto;
+	font-family: me_quranR3HOQ;
+	line-height: 217%;
+	font-size: 25px;
+	height: 350px;
+	color: #000000;
+	vertical-align: middle;
+	background-repeat: repeat;
+}
+#mainheader {
+	vertical-align: top;
+	margin: 0px;
+	padding: 6px;
+	Text-align: center;
+	color: #483900;
+	font-family: Tahoma,Arabic Transparent,Traditional Arabic;
+	font-size: 14pt;
+	height: 31px;
+	color: green;
+	background-color: #FFFFF4;
+}
+#translate {
+	border-color: #339966;
+	border-bottom: 25px solid silver;
+	border-left: 3px solid silver;
+	border-right: 3px solid silver;
+	border-top: 1px solid silver;
+	vertical-align: top;
+	margin: 0px 0px 0px;
+	padding: 10px;
+	BACKGROUND-COLOR: #FFFFF4;
+	font-size: 12pt;
+	color: #000000;
+	text-align: left;
+	overflow: auto;
+	height: 350px;
+	font-family: Arial,Helvetica,sans-serif;
+	line-height: 160%;
+
+}
+#bismEng,#bism {
+text-align:center;
+}
+.button {
+	border-color: #000000;
+	border: 1px solid #003300;
+	margin: 0px;
+	background: white;
+	font-family: times;
+	font-size: 11pt;
+	color: #000000;
+	display: inline;
+	outline-color: #00FF00;
+	background-color: #FFFFFF;
+	font-style: normal;
+	text-align: left;
+	vertical-align:middle;	
+	height:22px;
+}
+.button2 {
+    font-family: times;
+	border: 1px solid sliver;
+	padding-right: 0px;
+	background: white;
+	font-size: 11pt;
+	color: green;
+	display: inline;
+	font-weight:bold;
+	text-align:left;
+
+}
+
+//a{
+//  white-space: nowrap;
+//}
+
+#myoptions {
+	padding: 0px;
+	background-color:  #424242;
+}
+TD.motif-L {
+	BACKGROUND-COLOR: #FFFFF4;
+	background-image: url('imgs-Rel2/motif-L.gif');
+	text-align: left;
+	background-repeat: no-repeat;
+}
+TD.motif-R {
+	BACKGROUND-COLOR: #FFFFF4;
+	background-image: url('imgs-Rel2/motif-R.gif');
+	text-align: right;
+	background-repeat: no-repeat;
+}
+
+A:link {
+    
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+
+}
+A:active {
+	COLOR:#000000;  TEXT-DECORATION: none;
+
+}
+A:visited {
+	COLOR:  #000000;  TEXT-DECORATION: none;
+
+}
+A:hover {
+	color: #99CCFF; TEXT-DECORATION: none;
+
+}
+	
+	
+.style3 {
+	color: #99CCFF;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+.style10 {
+	text-align: left;
+}
+.style11 {
+	text-align: right;
+}
+.style12 {
+	font-size: 1pt;
+}
+.style13 {
+	color: #99CCFF;
+}
+
+
